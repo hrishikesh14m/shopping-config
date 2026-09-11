@@ -1,2 +1,2 @@
 app:
-  environment: development
+  environment: local
