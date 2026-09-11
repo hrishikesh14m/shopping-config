@@ -10,11 +10,11 @@ spring:
       routes:
 
         - id: user-service
-          url: lb://USER-SERVICE
+          uri: lb://USER-SERVICE
           predicates:
             - Path=/api/v1/users/**
 
         - id: product-service
-          url: lb://PRODUCT-SERVICE
+          uri: lb://PRODUCT-SERVICE
           predicates:
             - Path=/api/v1/products/**
