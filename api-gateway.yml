@@ -8,13 +8,12 @@ sprint:
   cloud:
     gateway:
       routes:
-
         - id: user-service
-        - url: lb://USER-SERVICE
-        - predicates:
+          url: lb://USER-SERVICE
+          predicates:
             - Path=/api/v1/users/**
 
         - id: product-service
-        - url: lb://PRODUCT-SERVICE
-        - predicates:
+          url: lb://PRODUCT-SERVICE
+          predicates:
             - Path=/api/v1/products/**
