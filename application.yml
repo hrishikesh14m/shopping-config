@@ -1,2 +1,2 @@
 app:
-  message: "Hello from Central Config Server"
+  environment: local
