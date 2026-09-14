@@ -11,3 +11,17 @@ eureka:
       defaultZone: http://localhost:8761/eureka # telling user-service my eureka server is running here
       register-with-eureka: true #Register this application with Eureka
       fetch-registry: true # this means this application is allowed to fetch info about other registerd services.
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/shopping_user_db
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: false
+      properties:
+        hibernate:
+          format_sql: true
