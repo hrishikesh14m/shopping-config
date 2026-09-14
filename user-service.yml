@@ -5,6 +5,20 @@ spring:
   application:
     name: user-service
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/shopping_user_db
+    username: root
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
 eureka:
   client:
     service-url:
@@ -12,16 +26,3 @@ eureka:
       register-with-eureka: true #Register this application with Eureka
       fetch-registry: true # this means this application is allowed to fetch info about other registerd services.
 
-  datasource:
-    url: jdbc:postgresql://localhost:5432/shopping_user_db
-    username: root
-    password: root
-    driver-class-name: org.postgresql.Driver
-
-    jpa:
-      hibernate:
-        ddl-auto: update
-      show-sql: false
-      properties:
-        hibernate:
-          format_sql: true
