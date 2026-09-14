@@ -27,3 +27,6 @@ eureka:
       register-with-eureka: true #Register this application with Eureka
       fetch-registry: true # this means this application is allowed to fetch info about other registerd services.
 
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 3600000
