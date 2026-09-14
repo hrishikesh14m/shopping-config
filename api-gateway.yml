@@ -7,6 +7,8 @@ spring:
 
   management:
     endpoints:
+      gateway:
+        access: read-only
       web:
         exposure:
           include: health,info,gateway
