@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: product-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/shopping_product_db
 
   eureka:
     client:
