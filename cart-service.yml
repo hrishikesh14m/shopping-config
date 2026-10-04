@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: cart-service
+  data:
+    redis:
+      host: localhost
+      port: 6379
 
   eureka:
     client:
@@ -12,3 +16,8 @@ spring:
       register-with-eureka: true
       fetch-registry: true
 
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health,info
